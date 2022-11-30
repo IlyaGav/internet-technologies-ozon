@@ -1,8 +1,12 @@
-:host {
+.app-root-container {
+  margin: auto;
   display: flex;
   flex-flow: column;
-  min-width: 1400px;
+  height: 100%;
+  width: 100%;
   max-width: 1400px;
+
+  overflow: auto;
 }
 
 .navigation {
@@ -75,7 +79,7 @@
 
 }
 
-header {
+.header {
   padding: 4px 28px;
   align-items: center;
   display: flex;
@@ -94,7 +98,7 @@ header {
       width: 128px;
       margin-right: 38px;
 
-      img {
+      .img {
         max-height: 100%;
         max-width: 100%;
       }
@@ -152,6 +156,7 @@ header {
           width: 400px;
           border: none !important;
           border-radius: 4px;
+          outline: none;
         }
       }
 
@@ -167,6 +172,7 @@ header {
         align-items: center;
         justify-content: center;
         transition: 500ms;
+        border: none;
       }
 
       .search-button:hover {
@@ -234,7 +240,7 @@ header {
   .sale-img-container {
     margin-top: 32px;
 
-    img {
+    .img {
       width: 100%;
       border-radius: 8px;
     }
@@ -263,7 +269,6 @@ header {
 
         .item {
           width: 144px;
-          //height: 170px;
 
           display: flex;
           flex-flow: column;
@@ -272,12 +277,12 @@ header {
           text-align: center;
           font-size: 16px;
 
-          img {
+          .img {
             height: 144px;
             border-radius: 12px;
           }
 
-          span {
+          .item-text {
             height: 32px;
             text-overflow: ellipsis;
             margin-top: 8px;
@@ -289,7 +294,69 @@ header {
   }
 }
 
-footer {
-  margin-left: auto;
+.footer {
   height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+
+  .footer-text {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+
+.overlay-container {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.list-container {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+
+  min-width: 112px;
+  overflow: auto;
+
+  padding: 8px 0;
+
+}
+
+.list-container-item {
+  padding-left: 8px;
+  padding-right: 8px;
+
+  min-height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  .remove-button {
+    margin-left: 4px;
+    background: red;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30px;
+    color: white;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, .04);
+  }
 }
