@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from './product-card.component';
+import {FavoriteSvgModule} from "../favorite-svg/favorite-svg.module";
+import {CounterModule} from "../counter/counter.module";
 
 
 
@@ -12,7 +14,9 @@ import { ProductCardComponent } from './product-card.component';
         ProductCardComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        FavoriteSvgModule,
+        CounterModule
     ]
 })
 export class ProductCardModule { }

@@ -13,5 +13,18 @@
     {{product.name}}
   </div>
 
-  <div class="by-button">В корзину</div>
+  <div *ngIf="(count ?? 0) <= 0; else counter" class="by-button" (click)="add()">В корзину</div>
+
+  <ng-template #counter>
+    <app-counter [count]="count" (increment)="increment()" (decrement)="decrement()"></app-counter>
+  </ng-template>
+
+
+</div>
+
+<div class="config">
+  <app-favorite-svg class="favorite"
+                    [isFavorite]="isFavorite"
+                    (click)="favoritesStorageService.toggle(product)">
+  </app-favorite-svg>
 </div>

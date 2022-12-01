@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CatalogComponent } from './catalog.component';
+import { CounterComponent } from './counter.component';
 
 
 
 @NgModule({
     declarations: [
-        CatalogComponent
+        CounterComponent
     ],
     exports: [
-        CatalogComponent
+        CounterComponent
     ],
     imports: [
         CommonModule
     ]
 })
-export class CatalogModule { }
+export class CounterModule { }

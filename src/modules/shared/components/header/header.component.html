@@ -1,20 +1,20 @@
 <header class="header">
 
   <div class="headers">
-    <div class="logo">
+    <a class="logo" href="/">
       <img class="img"
            loading="lazy"
            src="https://cdn1.ozone.ru/s3/cms/35/t10/wc200/1doodle_new.png"
            alt="Ozon">
-    </div>
+    </a>
 
-    <div class="menu">
+    <a class="menu" href="/category">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path fill="currentColor"
               d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm2 0a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Zm1 5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H8Zm-4-4a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
       </svg>
       Каталог
-    </div>
+    </a>
 
     <div class="search-container">
 
@@ -70,7 +70,12 @@
         <span>Заказы</span>
       </div>
 
-      <div class="action">
+      <a href="favorites" class="action">
+
+        <ng-container *ngIf="countFavorites | async as count">
+          <span *ngIf="count > 0" class="caption">{{count}}</span>
+        </ng-container>
+
         <div class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="g4w">
             <path fill="currentColor"
@@ -80,9 +85,14 @@
         </div>
 
         <span>Избранное</span>
-      </div>
+      </a>
 
-      <div class="action">
+      <a href="cart" class="action">
+
+        <ng-container *ngIf="countCart | async as count">
+          <span *ngIf="count > 0" class="caption">{{count}}</span>
+        </ng-container>
+
         <div class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="au7">
             <path fill="currentColor"
@@ -92,7 +102,7 @@
         </div>
 
         <span>Корзина</span>
-      </div>
+      </a>
 
     </div>
   </div>

@@ -1,16 +1,31 @@
 :host {
+  display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+
+  position: relative;
 }
 
 .image-container {
+  flex: 1;
+  display: flex;
+
   position: relative;
   cursor: pointer;
 
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  padding: 4px;
+
   .img {
     width: 100%;
+    margin: auto;
+
+    border-radius: 4px;
   }
 
   .image-background {
@@ -50,5 +65,33 @@
 
   &:hover {
     background: #0050e0;
+  }
+}
+
+.name {
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.config {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  width: 40px;
+  z-index: 1000;
+
+  .favorite {
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+
+   cursor: pointer;
   }
 }

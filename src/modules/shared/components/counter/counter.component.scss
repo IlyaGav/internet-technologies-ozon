@@ -1,0 +1,52 @@
+.container {
+
+   min-width: 135px;
+
+  display: flex;
+  flex-flow: row;
+
+  align-items: center;
+
+  .button {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 8px;
+    cursor: pointer;
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-size: inherit;
+    line-height: 0;
+
+    min-width: auto;
+
+    span {
+      align-items: center;
+      background-color: #005bff;
+      box-sizing: border-box;
+      display: inline-flex;
+
+      height: inherit;
+      justify-content: center;
+
+      border-radius: 8px;
+      padding: 8px;
+
+      background-color: rgba(0, 150, 255, .08);
+      color: #005bff;
+
+      min-height: 40px;
+
+    }
+
+  }
+
+  .count {
+    flex: 1;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 6px;
+    text-align: center;
+  }
+}

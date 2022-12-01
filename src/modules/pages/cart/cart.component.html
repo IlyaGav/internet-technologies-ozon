@@ -1,0 +1,31 @@
+<div class="title">
+  <h1>Корзина</h1>
+</div>
+
+<div *ngIf="products.length > 0" class="container">
+
+  <div class="products-container">
+    <ng-container *ngFor="let product of products">
+      <app-cart-product-item class="product" [item]="product"></app-cart-product-item>
+    </ng-container>
+  </div>
+
+  <div class="place-order-container">
+
+    <div class="button-container">
+
+      <button class="button">
+        <span class="txt">Перейти к оформлению</span>
+      </button>
+
+      <span style="color: #808d9a; font-size: 14px;">Доступные способы и время доставки можно выбрать при оформлении заказа</span>
+
+    </div>
+
+    <div class="divider"></div>
+
+  </div>
+
+</div>
+
+<div *ngIf="products.length === 0">ПУСТО</div>

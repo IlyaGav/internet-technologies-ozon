@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+}
+
+.divider-container {
+  margin-bottom: 16px;
+}
+
+.divider {
+  border-top: 1px solid #d2d9df;
+  width: 100%;
+}
+
+.products-container {
+  grid-column-gap: 16px;
+  grid-row-gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+

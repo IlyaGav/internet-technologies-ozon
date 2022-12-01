@@ -3,7 +3,7 @@
 <div class="categories-container">
   <ng-container *ngFor="let category of categories">
     <div class="category-container">
-      <a [href]="category.id" class="category">
+      <a [href]="'category/' + category.id" class="category">
         <div class="img-container">
           <img [src]="category.srcImg" class="img">
         </div>

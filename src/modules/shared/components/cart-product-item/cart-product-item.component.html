@@ -1,0 +1,34 @@
+<div class="divider"></div>
+
+<div class="container">
+
+  <div class="img-container">
+
+    <img class="img" [src]="item.product.srcImg">
+
+  </div>
+
+  <div class="info-container">
+
+    <div class="info"> {{item.product.name}} </div>
+
+  </div>
+
+  <div class="price-container">
+
+    <div class="price"> {{item.product.price}} </div>
+
+  </div>
+
+  <div class="action-container">
+
+    <div class="action">
+
+      <app-counter [count]="item.count" (increment)="increment()" (decrement)="decrement()"></app-counter>
+
+      <button class="remove" (click)="remove()"> Удалить </button>
+    </div>
+
+  </div>
+
+</div>

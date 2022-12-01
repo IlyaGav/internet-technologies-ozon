@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class="title">
+    <h1>Товары и списки</h1>
+  </div>
+
+  <div *ngIf="products.length > 0" class="divider-container">
+    <div class="divider"></div>
+  </div>
+
+  <div *ngIf="products.length > 0" class="products-container">
+    <ng-container *ngFor="let product of products">
+      <app-product-card class="product" [product]="product"></app-product-card>
+    </ng-container>
+  </div>
+
+  <div *ngIf="products.length === 0">
+    ПУСТО
+  </div>
+</div>

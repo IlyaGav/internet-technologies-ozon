@@ -33,6 +33,7 @@
       font-weight: 600;
       justify-content: space-evenly;
       transition: 500ms;
+      text-decoration: none;
 
       &:hover {
         background: #0050e0;
@@ -102,6 +103,10 @@
       align-items: center;
 
       .action {
+        width: 76px;
+        height: 56px;
+
+        position: relative;
         cursor: pointer;
         margin-right: 16px;
         display: flex;
@@ -110,10 +115,28 @@
         align-items: center;
         font-size: 14px;
         transition: 500ms;
+        text-decoration: none;
+        color: #001a34;
 
         &:hover {
           color: #0050e0;
         }
+      }
+
+      .caption {
+        background-color: #f91155;
+        border-radius: 8px;
+        color: white;
+        height: 16px;
+        line-height: 17px;
+        padding: 0 8px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        font-size:12px;
+        font-weight: 500;
+        letter-spacing: 0.5px
       }
 
     }
