@@ -1,0 +1,20 @@
+.header {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.category-container {
+  padding: 4px 0;
+
+  .category {
+    font-size: 16px;
+    color: #001a34;
+    text-decoration: none;
+
+    &:hover {
+      color: #0050e0;
+      cursor: pointer;
+    }
+  }
+}

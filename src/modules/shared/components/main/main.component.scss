@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  flex-flow: column;
+}
+
+.long-banner {
+  height: 100px !important;
+  max-width: 9000px;
+}
+
+.banner {
+  height: 150px;
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  &:hover {
+    filter: brightness(.86);
+  }
+}
+
+.banners {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.stocks-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  .stock-container {
+
+    padding: 8px;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    .stock {
+      border-radius: 12px;
+      width: 200px;
+    }
+
+    &:hover {
+      background-color: #f6f7f9;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+:host {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location-info {
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  font-size: 14px;
+
+  .currency-container {
+    cursor: pointer;
+    background: rgba(14, 50, 103, .04);
+    padding: 4px;
+    font-size: 12px;
+    margin-right: 12px;
+  }
+
+  .delivery-container {
+    width: 300px;
+
+    display: flex;
+    flex-flow: row;
+    gap: 3px;
+
+    .city {
+      cursor: pointer;
+      font-weight: 500;
+      transition: 500ms;
+    }
+
+    .city:hover {
+      color: #005bff;
+    }
+
+    .select-address {
+      cursor: pointer;
+      color: #005bff;
+    }
+  }
+}
+
+.quick-links-container {
+
+  .list {
+    display: flex;
+    flex-flow: row;
+    gap: 16px;
+
+    font-size: 14px;
+
+    .item {
+      cursor: pointer;
+      color: #5a6c7d;
+      transition: 500ms;
+    }
+
+    .item:hover {
+      color: #003ead;
+    }
+  }
+}

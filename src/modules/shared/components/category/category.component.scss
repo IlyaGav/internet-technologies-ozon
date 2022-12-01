@@ -1,0 +1,16 @@
+.filters {
+  height: 100%;
+  min-width: 250px;
+}
+
+.products-container {
+  grid-column-gap: 16px;
+  grid-row-gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+
+  .product {
+    border-radius: 4px;
+  }
+}

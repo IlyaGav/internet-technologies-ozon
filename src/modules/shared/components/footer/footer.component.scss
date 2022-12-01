@@ -1,0 +1,19 @@
+:host {
+  min-height: 150px;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+
+  background-color: #f2f5f9;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.footer-text {
+  margin-left: auto;
+  margin-right: 30px;
+}

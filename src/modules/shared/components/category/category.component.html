@@ -1,0 +1,7 @@
+<app-filters class="filters"></app-filters>
+
+<div class="products-container">
+  <ng-container *ngFor="let product of products">
+    <app-product-card class="product" [product]="product"></app-product-card>
+  </ng-container>
+</div>
